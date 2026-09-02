@@ -1,0 +1,3 @@
+public enum ResultadoIMC {
+	BAIXO_PESO, NORMAL, SOBREPESO, OBESIDADE;
+}
