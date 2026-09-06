@@ -62,33 +62,27 @@ public class Main {
 				System.out.println("=".repeat(12));
 
 			} else if (choice == 2) {
-				System.out.printf("""
-		                RESULTADO FINAL:
-		                [ JOGADOR ]  %s x %s [ CPU ]
-		                """, player.toString(), cpu.toString());
-				break;
+				System.out.println("=".repeat(12));
+                
+                int pontosJogador = player.totalDePontosAtual();
+                int pontosCpu = cpu.totalDePontosAtual();
+                
+                System.out.printf("""
+                        RESULTADO FINAL:
+                        [ JOGADOR ] %s x %s [ CPU ]
+                        """, player.toString(), cpu.toString());
+                        
+                if (pontosJogador > pontosCpu) {
+                    System.out.println("PARABÉNS! VOCÊ VENCEU!");
+                } else if (pontosCpu > pontosJogador) {
+                    System.out.println("O ADVERSÁRIO VENCEU!");
+                } else {
+                    System.out.println("DEU EMPATE!");
+                }
+                System.out.println("=".repeat(12));
+                break;
 			}
 		}
-
-        System.out.println("=".repeat(12));
-		
-        int pontosJogador = player.totalDePontosAtual();
-        int pontosCpu = cpu.totalDePontosAtual();
-        
-        System.out.printf("""
-                RESULTADO FINAL:
-                [ JOGADOR ] %s x %s [ CPU ]
-                """, player.toString(), cpu.toString());
-                
-        if (pontosJogador > pontosCpu) {
-            System.out.println("PARABÉNS! VOCÊ VENCEU!");
-        } else if (pontosCpu > pontosJogador) {
-            System.out.println("O ADVERSÁRIO VENCEU!");
-        } else {
-            System.out.println("DEU EMPATE!");
-        }
-		
-        System.out.println("=".repeat(12));
 
         input.close();
     }
