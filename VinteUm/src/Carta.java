@@ -5,8 +5,7 @@ public class Carta {
 	
 	//construtor
 	public Carta(String na, String nu, int v) {
-		na = na.substring(0,1).toUpperCase() + na.substring(1);
-		naipe = na;
+		naipe = na.substring(0,1).toUpperCase() + na.substring(1);
 		numeracao = nu;
 		valor = v;
 	}

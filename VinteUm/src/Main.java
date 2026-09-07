@@ -72,13 +72,13 @@ public class Main {
                         [ JOGADOR ] %s x %s [ CPU ]
                         """, player.toString(), cpu.toString());
                         
-                if (pontosJogador > pontosCpu) {
+                if (pontosJogador > pontosCpu) 
                     System.out.println("PARABÉNS! VOCÊ VENCEU!");
-                } else if (pontosCpu > pontosJogador) {
+                else if (pontosCpu > pontosJogador) 
                     System.out.println("O ADVERSÁRIO VENCEU!");
-                } else {
+                else 
                     System.out.println("DEU EMPATE!");
-                }
+
                 System.out.println("=".repeat(12));
                 break;
 			}

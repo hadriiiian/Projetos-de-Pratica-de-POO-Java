@@ -24,12 +24,8 @@ public class Mao {
 	        return pontos; 
 		
 		int pontosA = pontos + (qtdA - 1);
-		
-		if (pontosA <= 10) 
-	        return pontosA + 11; 
-	    else
-	        return pontosA + 1; 
-	    
+		return pontosA <= 10 ? pontosA + 11 : pontosA + 1;
+
 	}
 	
 	public String toString() {
@@ -38,9 +34,8 @@ public class Mao {
 		for (int i = 0; i < qtdCartas; i++) {
 	        retorno += baralho[i].toString();
 	        
-	        if (i < qtdCartas - 1) {
+	        if (i < qtdCartas - 1)
 	            retorno += ", ";
-	        }
 	    }
 		retorno += String.format("] (%d pontos)", this.totalDePontosAtual());
 		return retorno;
