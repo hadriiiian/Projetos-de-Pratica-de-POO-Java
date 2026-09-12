@@ -1,6 +1,6 @@
 public class Mao {
 	private Carta[] baralho = new Carta[12];
-	private int qtdCartas;
+	private int qtdCartas = 0;
 	
 	public void addCartas(Carta c) {
 		baralho[qtdCartas++] = c;

@@ -35,6 +35,11 @@ public class Main {
 			int choice = Integer.valueOf(input.nextLine());
 			while (choice != 1 && choice != 2) {
 				System.out.println("OPÇÃO INVÁLIDA! TENTE NOVAMENTE");
+				System.out.println("""
+						O QUE DESEJA FAZER AGORA?
+						[ 1 ] - Puxar uma nova carta
+						[ 2 ] - Encerrar o jogo
+						>>> """);
 				choice = Integer.valueOf(input.nextLine());
 			}
 			
