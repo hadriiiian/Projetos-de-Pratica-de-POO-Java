@@ -20,11 +20,11 @@ public class Palavra {
 	}
 
 	//setters
-	public void setDica(String dica) {
-		this.dica = dica;
-	}
 	public void setPalavra(String palavra) {
 		this.palavra = palavra;
+	}
+	public void setDica(String dica) {
+		this.dica = dica;
 	}
 	
 }

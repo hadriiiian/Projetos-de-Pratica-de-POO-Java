@@ -17,6 +17,13 @@ public class Main {
  
 		JogoDaForca game = new JogoDaForca(words);
 		game.sortear();
+		
+		if (game.getPosSorteada() == -1) {
+			System.out.println("Não há palavras disponíveis para sortear.");
+			input.close();
+			return;
+		}
+		
 		int fails = 0;
  
 		System.out.printf("%s JOGO DA FORCA %s%n", "=".repeat(6), "=".repeat(6));
