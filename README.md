@@ -19,25 +19,28 @@ Plataforma de triagem hospitalar desenvolvida para validar a elegibilidade de ca
 ### 5. Dominó (Uno-minó)
 O projeto implementa o "Uno-minó", uma variação single-player que funde a lógica de conexão matemática do Dominó com a mecânica de descarte contínuo do Uno, onde o objetivo é esvaziar a mão conectando suas peças a uma única "peça da vez" na mesa, que é integralmente substituída a cada jogada bem-sucedida. A modelagem orientada a objetos é dividida na classe `Peca`, que encapsula os valores numéricos e valida as conexões; na classe `Jogo`, responsável por inicializar, embaralhar e distribuir as 28 peças tradicionais; e na classe `Jogador`, que gerencia dinamicamente o inventário com a mão de peças do usuário. Toda essa dinâmica é orquestrada pela classe principal `Unomino`, que executa um laço interativo no console, processando as entradas do jogador, validando as regras de compatibilidade em tempo real e definindo o encerramento da partida — seja com a vitória ao esvaziar a mão ou com a derrota imediata ao tentar uma jogada incompatível.
 
-### 5. Jogo Matemático
+### 6. Jogo da Forca
+O projeto é uma implementação do clássico jogo onde o jogador deve descobrir uma palavra oculta por meio do palpite de letras, contando apenas com uma dica em texto e a quantidade de caracteres visíveis. A arquitetura do sistema é estruturada a partir da classe `Palavra`, que encapsula os textos da palavra e sua respectiva dica, e da classe `JogoDaForca`, que atua como o motor lógico gerenciando um dicionário de instâncias em formato de array. A inteligência da aplicação realiza o sorteio aleatório, isola as opções já utilizadas para evitar repetições e manipula um gabarito mascarado (com interrogações) que é revelado dinamicamente pelo método `testarLetra` a cada acerto utilizando um objeto `StringBuilder`. O fluxo de execução é orquestrado pela classe principal `Main`, que inicialmente capta as palavras digitadas pelo usuário para preencher o banco de dados e, em seguida, opera um laço interativo no terminal, processando os palpites até a conclusão da partida, calculando uma pontuação final baseada no comprimento da palavra e penalizada pelo número de falhas cometidas.
+
+### 7. Jogo Matemático
 Software educacional interativo desenhado para o treinamento prático de aritmética. O motor lógico funciona através da classe `JogoMatematico`, que emprega geradores de números pseudoaleatórios para montar equações dinâmicas envolvendo as quatro operações fundamentais com valores entre zero e cem. O sistema gerencia o estado da partida validando a entrada numérica do usuário contra o resultado real da expressão matemática, mantendo um contador de falhas que encerra a execução automaticamente assim que o limite de três respostas incorretas é atingido.
 
-### 6. Par ou Ímpar
+### 8. Par ou Ímpar
 Aplicação de entretenimento que simula disputas de par ou ímpar contra uma inteligência artificial básica. A arquitetura orientada a objetos define a classe `Jogador` para representar tanto o usuário humano quanto o computador, encapsulando o nome e o placar individual. O laço de repetição principal gerencia turnos sucessivos, capturando a jogada do usuário e gerando um número aleatório para a máquina, determinando o vencedor da rodada por operações de módulo e interrompendo o jogo apenas quando um dos competidores atinge a condição de vitória de dez pontos.
 
-### 7. Planejador de Viagens
+### 9. Planejador de Viagens
 Utilitário de logística de rotas criado para otimizar o planejamento de viagens rodoviárias de longa distância. O sistema exige a instanciação de um objeto da classe `Carro`, que define as características de consumo de combustível e a capacidade máxima do tanque. A inteligência do programa fica a cargo da classe `Planejador`, que recebe a distância total do trajeto e processa operações matemáticas para prever o consumo exato, retornando ao usuário o número de paradas obrigatórias para reabastecimento antes de chegar ao destino.
 
-### 8. Porteiro Automático
+### 10. Porteiro Automático
 Sistema de controle de acesso focado na geração de saudações dinâmicas e personalizadas. O processamento ocorre através da classe `Porteiro`, equipada com o método de boas-vindas que recebe instâncias da classe `Pessoa` como parâmetro de entrada. A lógica interna mapeia os atributos de idade e gênero do visitante através de estruturas de controle condicional compostas, devolvendo ao terminal o tratamento adequado para cada perfil, distinguindo entre crianças, homens, mulheres e formalidades adequadas ao contexto.
 
-### 9. Projeto Pontos
+### 11. Projeto Pontos
 Biblioteca de modelagem matemática desenvolvida para manipulação de coordenadas no plano cartesiano bidimensional. A estrutura base é a classe `Ponto`, que encapsula as posições horizontais e verticais através de atributos inteiros. O comportamento da classe inclui funções analíticas como o método de verificação de quadrante, que mapeia a localização espacial do objeto e verifica sobreposições aos eixos, além da implementação de métodos de comparação de estado, avaliando se duas instâncias distintas ocupam a exata mesma posição no espaço.
 
-### 10. Retângulos e Quadrados
+### 12. Retângulos e Quadrados
 Aplicação de geometria computacional orientada à manipulação e análise de polígonos regulares. A classe `Retangulo` requer a definição de base e altura em seu construtor e disponibiliza métodos tradicionais de cálculo de área e perímetro. O diferencial arquitetural envolve algoritmos de verificação para determinar se a forma constitui um quadrado perfeito e funções de renderização textual, que utilizam laços de repetição aninhados para plotar a dimensão exata do objeto diretamente na saída do console.
 
-### 11. Vinte e Um
+### 13. Vinte e Um
 Simulador completo do clássico jogo de cartas Blackjack, respeitando as regras padronizadas. O domínio do problema foi fragmentado em diversas classes coesas, como `Carta` para armazenar naipes e valores, `Baralho` para gerenciar a coleção com algoritmos de embaralhamento, e `Mao` para gerenciar as cartas ativas de cada jogador. O sistema suporta mecânicas complexas, incluindo o ajuste dinâmico do peso da carta Ás dependendo da pontuação atual, operando turnos sucessivos e autônomos contra a mesa virtual.
 
 ## Tecnologias Utilizadas
