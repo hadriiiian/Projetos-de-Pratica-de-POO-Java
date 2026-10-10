@@ -115,7 +115,7 @@ Simulador completo do clássico jogo de cartas Blackjack, respeitando as regras 
 
 ## Tecnologias Utilizadas
 
-<img src="https://img.shields.io/badge/Java_JDK_17-ED8B00?style=flat&logo=openjdk&logoColor=white" alt="Java JDK 17"/>
+<img src="https://img.shields.io/badge/Java_JDK_21-ED8B00?style=flat&logo=openjdk&logoColor=white" alt="Java JDK 21"/>
 <img src="https://img.shields.io/badge/Eclipse_IDE-2C2255?style=flat&logo=eclipseide&logoColor=white" alt="Eclipse IDE"/>
 
 ## Como Executar
