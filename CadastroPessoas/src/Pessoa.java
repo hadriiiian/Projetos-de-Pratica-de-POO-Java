@@ -1,49 +1,46 @@
-import java.time.LocalDate;
-import java.time.Period;
+import java.time.Year;
 
 public class Pessoa {
 	private String nome;
-	private String dataNasc;
+	private int anoNascimento;
 	private int idade;
-	
 
-	//construtor
-	public Pessoa(String nome, String dataNasc) {
+	// construtor
+	public Pessoa(String nome, int anoNascimento) {
 		this.nome = nome;
-		this.dataNasc = dataNasc;
-		
-		String[] partes = dataNasc.split("/");
-		int dia = Integer.valueOf(partes[0]);
-		int mes = Integer.valueOf(partes[1]);
-		int ano = Integer.valueOf(partes[2]);
-		
-		LocalDate nasc = LocalDate.of(ano, mes, dia);
-		LocalDate hoje = LocalDate.now();
-		Period p = Period.between(nasc, hoje);
-		idade = p.getYears();
+		this.anoNascimento = anoNascimento;
+		this.idade = Year.now().getValue() - anoNascimento;
 	}
-	
-	//getters
+
+	public Pessoa(String nome, String anoNascimento) {
+		this(nome, Integer.parseInt(anoNascimento.trim()));
+	}
+
+	// getters
 	public String getNome() {
 		return nome;
 	}
-	public String getAnoNasc() {
-		return dataNasc;
+
+	public int getAnoNascimento() {
+		return anoNascimento;
 	}
+
 	public int getIdade() {
 		return idade;
 	}
-	
-	//setters
+
+	// setters
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setAnoNasc(String anoNasc) {
-		this.dataNasc = anoNasc;
+
+	public void setAnoNascimento(int anoNascimento) {
+		this.anoNascimento = anoNascimento;
+		this.idade = Year.now().getValue() - anoNascimento;
 	}
-	
+
+	@Override
 	public String toString() {
-		return String.format("%s: %s", nome, dataNasc);
+		return String.format("%s: %d anos (nasc. %d)", nome, idade, anoNascimento);
 	}
-	
 }
