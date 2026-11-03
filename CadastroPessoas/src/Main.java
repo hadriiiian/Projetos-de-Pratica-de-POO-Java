@@ -15,7 +15,7 @@ public class Main {
 					"Cadastro de Pessoas", 
 					JOptionPane.QUESTION_MESSAGE);
 
-			int anoNasc = Integer.parseInt(anoStr != null ? anoStr.trim() : "0");
+			int anoNasc = Integer.valueOf(anoStr != null ? anoStr.trim() : "0");
 			pessoas.add(new Pessoa(nome, anoNasc));
 		}
 
