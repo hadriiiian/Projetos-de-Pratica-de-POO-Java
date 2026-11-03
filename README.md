@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white" alt="Java"/>
   <img src="https://img.shields.io/badge/POO-6A0DAD?style=flat&logo=hackthebox&logoColor=white" alt="POO"/>
+  <img src="https://img.shields.io/badge/Swing_GUI-5382A1?style=flat&logo=openjdk&logoColor=white" alt="Swing GUI"/>
   <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat&logo=eclipseide&logoColor=white" alt="Eclipse"/>
   <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git"/>
 </p>
@@ -17,7 +18,8 @@
 
 - **Classes e objetos** — modelagem de problemas do dia a dia
 - **Encapsulamento** — atributos protegidos, getters e setters
-- **Herança e polimorfismo** — classes abstratas e especializações
+- **Herança e polimorfismo** — classes abstratas, interfaces e especializações
+- **Interfaces Gráficas (GUI com Swing)** — janelas interativas com `JFrame`, `JLabel`, caixas de diálogo `JOptionPane` e tooltips
 - **Lógica e controle de fluxo** — laços, condicionais e menus no console
 - **Coleções** — arrays e `ArrayList` para gerenciar objetos
 - **Jogos e simulações** — regras de negócio aplicadas na prática
@@ -40,6 +42,9 @@
 | 12 | Projeto Pontos | Comparação de estado, plano cartesiano |
 | 13 | Retângulos e Quadrados | Laços aninhados, renderização no console |
 | 14 | Vinte e Um | Múltiplas classes coesas, lógica de regras |
+| 15 | Bandeiras | Interfaces Gráficas (`Swing`), `JOptionPane`, `JFrame`, `JLabel`, renderização visual |
+| 16 | Cadastro de Pessoas | `JOptionPane`, `ArrayList`, componentes `Swing`, grade visual, `ToolTipText` dinâmico |
+| 17 | Pookemon | Interfaces, polimorfismo comportamental, desacoplamento e composição (Strategy) |
 
 ## 📂 Projetos Implementados
 
@@ -110,6 +115,21 @@ Aplicação de geometria computacional orientada à manipulação e análise de 
 
 ### 14. Vinte e Um
 Simulador completo do clássico jogo de cartas Blackjack, respeitando as regras padronizadas. O domínio do problema foi fragmentado em diversas classes coesas, como `Carta` para armazenar naipes e valores, `Baralho` para gerenciar a coleção com algoritmos de embaralhamento, e `Mao` para gerenciar as cartas ativas de cada jogador. O sistema suporta mecânicas complexas, incluindo o ajuste dinâmico do peso da carta Ás dependendo da pontuação atual, operando turnos sucessivos e autônomos contra a mesa virtual.
+
+---
+
+### 15. Bandeiras
+Aplicação com interface gráfica desenvolvida em Java Swing que renderiza dinamicamente as bandeiras de quatro nações (Alemanha, França, Camarões e Holanda). O fluxo inicial utiliza o método estático `JOptionPane.showInputDialog` configurado com uma lista de seleção para capturar a escolha do usuário. A arquitetura implementa a interface `Bandeira` (que define o contrato do método `desenhar`) e quatro classes especializadas (`Alemanha`, `Franca`, `Camaroes` e `Holanda`), cada uma herdando de `JFrame`. As listras horizontais e verticais são construídas utilizando instâncias de `JLabel` com posicionamento absoluto (`setLayout(null)`), manipulando os métodos `setOpaque(true)`, `setBackground` com cores customizadas e, no caso de Camarões, adicionando um ícone centralizado com `ImageIcon` para representar a estrela nacional.
+
+---
+
+### 16. Cadastro de Pessoas
+Sistema de cadastro e visualização gráfica de indivíduos construído com componentes da biblioteca Swing. O modelo de domínio é encapsulado na classe `Pessoa`, responsável por armazenar o nome, o ano de nascimento e calcular dinamicamente a idade através da API moderna de data do Java (`java.time.Year`). A classe principal `Main` orquestra a entrada de dados interativa de quatro usuários por meio de caixas de diálogo `JOptionPane.showInputDialog` dentro de um laço de repetição, armazenando as instâncias em uma lista dinâmica (`ArrayList<Pessoa>`). Em seguida, a janela gráfica `Grade` (estendendo `JFrame`) renderiza os nomes em uma disposição bidimensional de 2x2 utilizando `JLabel`, configurando a dica flutuante via `setToolTipText` para exibir a idade correspondente ao posicionar o cursor sobre cada nome.
+
+---
+
+### 17. Pookemon
+Simulação inspirada no universo Pokémon focada na aplicação prática de interfaces e polimorfismo comportamental (padrão Strategy). A classe `Pookemon` modela as propriedades de nome, tipo e nível da criatura, gerenciando quatro slots independentes de habilidades por meio da interface `Ataque`. As especializações concretas `Corte`, `FolhaNavalha`, `Terremoto` e `SemAtaque` implementam o método `atacar`, permitindo que os monstros de bolso aprendam, executem e substituam golpes dinamicamente em tempo de execução sem acoplamento direto com as classes específicas dos ataques.
 
 ---
 
